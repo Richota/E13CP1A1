@@ -1,0 +1,38 @@
+<h1>Ingresar una venta</h1>
+<%= form_with model: Sale.new do |f| %>
+  <table class="table">
+    <tbody>
+      <tr>
+        <th scope="row"><%= f.label "Código" %></th>
+        <td><%= f.text_field :cod %> </td>
+      </tr>
+      <tr>
+        <th scope="row">Detalle</th>
+        <td><%= f.text_area :detail %></td>
+      </tr>
+      <tr>
+        <th scope="row">Categoria</th>
+        <td><%= f.text_field :category %></td>
+      </tr>
+      <tr>
+        <th scope="row">Valor</th>
+        <td><%= f.number_field :value %></td>
+      </tr>
+      <tr>
+        <th scope="row">Descuento</th>
+        <td><%= f.number_field :discount %></td>
+      </tr>
+      <tr>
+        <th scope="row">I.V.A.</th>
+        <td><%= f.check_box :tax %></td>
+      </tr>
+      <tr>
+        <th scope="row">TOTAL</th>
+        <td><%= %></td>
+      </tr>
+    </tbody>
+  </table>
+
+    <p></p>
+    <%= f.submit "Enviar" %>
+<% end %>
