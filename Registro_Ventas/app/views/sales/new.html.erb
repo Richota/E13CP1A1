@@ -4,27 +4,27 @@
   <table class="table">
     <tbody>
       <tr>
-        <th scope="row"><%= f.label "Código" %></th>
+        <th scope="row"><%= f.label :cod, "Código" %></th>
         <td><%= f.number_field :cod %> </td>
       </tr>
       <tr>
-        <th scope="row"><%= f.label "Detalle" %></th>
+        <th scope="row"><%= f.label :detail, "Detalle" %></th>
         <td><%= f.text_area :detail, rows: 4 %></td>
       </tr>
       <tr>
-        <th scope="row"><%= f.label "Categoria" %></th>
+        <th scope="row"><%= f.label :category, "Categoria" %></th>
         <td><%= f.text_field :category%></td>
       </tr>
       <tr>
-        <th scope="row"><%= f.label "Valor" %></th>
+        <th scope="row"><%= f.label :value, "Valor" %></th>
         <td><%= f.number_field :value %></td>
       </tr>
       <tr>
-        <th scope="row"><%= f.label "Descuento" %></th>
+        <th scope="row"><%= f.label :discount, "Descuento" %></th>
         <td><%= f.number_field :discount %></td>
       </tr>
       <tr>
-        <th scope="row"><%= f.label "IVA" %></th>
+        <th scope="row"><%= f.label :tax, "IVA" %></th>
         <td><%= f.check_box :tax %></td>
       </tr>
       <tr>

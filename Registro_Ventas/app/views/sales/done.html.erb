@@ -1,1 +1,35 @@
 <h1>El registro fue almacenado con éxito</h1>
+<table class="table table-hover">
+  <tbody>
+    <tr>
+      <th scope="row">Código</th>
+      <td><%= @sale.cod %></td>
+    </tr>
+    <tr class="table-secondary">
+      <th scope="row">Detalle</th>
+      <td><%= @sale.detail %></td>
+    </tr>
+    <tr>
+      <th scope="row">Categoria</th>
+      <td><%= @sale.category %></td>
+    </tr>
+    <tr class="table-secondary">
+      <th scope="row">Valor</th>
+      <td><%= @sale.value %></td>
+    </tr>
+    <tr>
+      <th scope="row">Descuento</th>
+      <td><%= @sale.discount %></td>
+    </tr>
+    <tr class="table-secondary">
+      <th scope="row">IVA</th>
+      <td><%= @sale.tax %></td>
+    </tr>
+    <tr class="table-info">
+      <th scope="row">Total</th>
+      <td><%= @total %></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3><%= link_to 'Ingresar nueva venta', new_sales_path, class: 'btn btn-primary' %></h3>
