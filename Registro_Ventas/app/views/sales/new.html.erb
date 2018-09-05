@@ -1,38 +1,39 @@
 <h1>Ingresar una venta</h1>
-<%= form_with model: Sale.new do |f| %>
+<%= form_with(model: @sale, local: true) do |f| %>
+
   <table class="table">
     <tbody>
       <tr>
         <th scope="row"><%= f.label "Código" %></th>
-        <td><%= f.text_field :cod %> </td>
+        <td><%= f.number_field :cod %> </td>
       </tr>
       <tr>
-        <th scope="row">Detalle</th>
-        <td><%= f.text_area :detail %></td>
+        <th scope="row"><%= f.label "Detalle" %></th>
+        <td><%= f.text_area :detail, rows: 4 %></td>
       </tr>
       <tr>
-        <th scope="row">Categoria</th>
-        <td><%= f.text_field :category %></td>
+        <th scope="row"><%= f.label "Categoria" %></th>
+        <td><%= f.text_field :category%></td>
       </tr>
       <tr>
-        <th scope="row">Valor</th>
+        <th scope="row"><%= f.label "Valor" %></th>
         <td><%= f.number_field :value %></td>
       </tr>
       <tr>
-        <th scope="row">Descuento</th>
+        <th scope="row"><%= f.label "Descuento" %></th>
         <td><%= f.number_field :discount %></td>
       </tr>
       <tr>
-        <th scope="row">I.V.A.</th>
+        <th scope="row"><%= f.label "IVA" %></th>
         <td><%= f.check_box :tax %></td>
       </tr>
       <tr>
-        <th scope="row">TOTAL</th>
+        <th scope="row"><%= f.label "TOTAL" %></th>
         <td><%= %></td>
       </tr>
     </tbody>
   </table>
 
     <p></p>
-    <%= f.submit "Enviar" %>
+    <%= f.submit "Ingresar", class: 'btn btn-info' %>
 <% end %>
